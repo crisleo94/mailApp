@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+.sidebar {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    text-align: left;
+}
+
+li {
+    list-style: none;
+}
+
+.jumbotron {
+    background-color: bisque;
+}
+
+.leftMenu {
+    margin-top: -32px;
+    margin-left: -30px;
+}
+
+.view {
+    margin-left: 20px;
+}
