@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiservicesService } from 'src/app/services/apiservices.service';
 
 @Component({
   selector: 'app-sent',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SentComponent implements OnInit {
 
-  constructor() { }
+  sent:any[] = [];
+
+
+  constructor(private api: ApiservicesService) {
+    this.api.getSent()
+    .subscribe((resp:any)=>{
+      this.sent = resp.data;
+    });
+   }
 
   ngOnInit() {
   }

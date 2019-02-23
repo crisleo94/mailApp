@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
@@ -9,7 +10,7 @@ import { InboxComponent } from './components/inbox/inbox.component';
 import { SendComponent } from './components/send/send.component';
 import { DeletedComponent } from './components/deleted/deleted.component';
 import { HomeComponent } from './components/home/home.component';
-import { AppRoutingModule } from './app-routing.module';
+import { appRutas } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    appRutas,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

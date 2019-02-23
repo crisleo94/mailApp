@@ -22,5 +22,9 @@ li {
 }
 
 .view {
-    margin-left: 20px;
+    margin-left: auto;
+}
+
+.formIngreso {
+    margin-top: 150px;
 }

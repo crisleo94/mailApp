@@ -1,3 +1,45 @@
-<p>
-  inbox works!
-</p>
+<h5>Favoritos</h5>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Favorito</th>
+            <th scope="col">Asunto</th>
+            <th scope="col">De:</th>
+            <th scope="col">Fecha</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let item of favorite; index as i">
+        <tr *ngIf="item.favorite==true">
+            <div class="check d-flex justify-content-center align-items-center">
+                <td><input type="checkbox" checked></td>
+            </div>
+            <td>{{item.subject}}</td>
+            <td>{{item.sender}}</td>
+            <td>{{item.created_date}}</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<h5>Recibidos</h5>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Favorito</th>
+            <th scope="col">Asunto</th>
+            <th scope="col">De:</th>
+            <th scope="col">Fecha</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let item of inbox; index as i">
+        <tr *ngIf="item.favorite==false">
+            <th scope="row">{{i+1}}</th>
+            <div class="check d-flex justify-content-center align-items-center">
+                <td><input type="checkbox"></td>
+            </div>
+            <td>{{item.subject}}</td>
+            <td>{{item.sender}}</td>
+            <td>{{item.created_date}}</td>
+        </tr>
+    </tbody>
+</table>
