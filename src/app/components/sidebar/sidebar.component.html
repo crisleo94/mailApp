@@ -1,14 +1,29 @@
-<ul class="row nav flex-column text-center">
-    <li class="nav-item fondoSide" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['Bandeja de Entrada']">Bandeja de Entrada</a>
+<ul class="nav flex-column">
+    <li class="row nav-item" routerLinkActive="active">
+        <a class="nav-link text-left fondoSide col-sm-8 pl-5" [routerLink]="['Bandeja de Entrada']">Bandeja de Entrada</a>
+        <div class="d-flex align-items-center col-sm-2">
+            <i class="fas fa-inbox"></i>
+        </div>
     </li>
-    <li class="nav-item fondoSide" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['Enviados']">Mensajes Enviados</a>
+
+    <li class="row nav-item" routerLinkActive="active">
+        <a class="nav-link text-left fondoSide col-sm-8 pl-5" [routerLink]="['Enviados']">Mensajes Enviados</a>
+        <div class="d-flex align-items-center col-sm-2">
+            <i class="far fa-share-square"></i>
+        </div>
     </li>
-    <li class="nav-item fondoSide" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['Papelera']">Eliminados</a>
+
+    <li class="row nav-item" routerLinkActive="active">
+        <a class="nav-link text-left fondoSide col-sm-8 pl-5" [routerLink]="['Papelera']">Eliminados</a>
+        <div class="d-flex align-items-center col-sm-2">
+            <i class="fas fa-trash-alt"></i>
+        </div>
     </li>
-    <li class="nav-item fondoSide" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['Nuevo (+)']">Nuevo</a>
+
+    <li class="row nav-item" routerLinkActive="active">
+        <a class="nav-link text-left fondoSide col-sm-8 pl-5" [routerLink]="['Nuevo (+)']">Nuevo</a>
+        <div class="d-flex align-items-center col-sm-2">
+            <i class="fas fa-plus-square"></i>
+        </div>
     </li>
 </ul>

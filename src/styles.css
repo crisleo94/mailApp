@@ -11,8 +11,36 @@ li {
     list-style: none;
 }
 
+
+/* app.component styles starts */
+
 .jumbotron {
     background-image: linear-gradient(-90deg, #007600, #efedef);
+}
+
+.tituloApp {
+    text-shadow: 2px 4px;
+    font-weight: bolder;
+}
+
+
+/* app.sidebar styles starts */
+
+.fondoSide {
+    text-decoration: none;
+    color: black;
+}
+
+.fondoSide:hover {
+    color: rgba(14, 2, 43, 0.966);
+}
+
+
+/* app.login styles starts */
+
+.botonLogin {
+    background-color: #002d00;
+    color: white;
 }
 
 .leftMenu {

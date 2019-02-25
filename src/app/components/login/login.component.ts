@@ -19,11 +19,8 @@ export class LoginComponent implements OnInit {
     this.frLogin = new FormGroup({
       'user': new FormControl('', Validators.required),
       'password': new FormControl('', Validators.required),
-    })
+    });
    }
-
-
- 
 
    logear(user:string, pass:number){
       this.usuario = user;
