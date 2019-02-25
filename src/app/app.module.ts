@@ -11,6 +11,11 @@ import { SendComponent } from './components/send/send.component';
 import { DeletedComponent } from './components/deleted/deleted.component';
 import { HomeComponent } from './components/home/home.component';
 import { appRutas } from './app.routes';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginGuard } from './components/login/login.guard';
+import { ErrorComponent } from './components/error/error.component';
+import { NoLoginGuard } from './components/login/no-login.guard';
+
 
 @NgModule({
   declarations: [
@@ -21,15 +26,17 @@ import { appRutas } from './app.routes';
     InboxComponent,
     SendComponent,
     DeletedComponent,
-    HomeComponent
+    HomeComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     appRutas,
-    
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [LoginGuard, NoLoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiservicesService } from 'src/app/services/apiservices.service';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { Mail } from '../../interface/mail.interface';
+
 
 @Component({
   selector: 'app-inbox',
@@ -12,6 +15,7 @@ export class InboxComponent implements OnInit {
 
   favorite:any[] = [];
 
+
   constructor(private api: ApiservicesService) {
 
     this.api.getInbox()
@@ -23,11 +27,14 @@ export class InboxComponent implements OnInit {
     .subscribe((resp:any)=>{
       this.favorite = resp.data;
     });
-
-    
    }
+
+   getBusqueda(termino:string){
+     
+   }
+
+   
 
   ngOnInit() {
   }
-
 }

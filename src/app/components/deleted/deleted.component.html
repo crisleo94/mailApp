@@ -1,3 +1,17 @@
-<p>
-  deleted works!
-</p>
+<h5>Eliminados</h5>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Asunto</th>
+            <th scope="col">De:</th>
+            <th scope="col">Fecha</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let item of inbox; index as i">
+        <tr *ngIf="item.state==false">
+            <td>{{item.subject}}</td>
+            <td>{{item.sender}}</td>
+            <td>{{item.created_date}}</td>
+        </tr>
+    </tbody>
+</table>

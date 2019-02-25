@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiservicesService } from 'src/app/services/apiservices.service';
 
 @Component({
   selector: 'app-deleted',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeletedComponent implements OnInit {
 
-  constructor() { }
+  inbox:any[] = [];
+
+
+  constructor(private api: ApiservicesService) { 
+    this.api.getInbox()
+    .subscribe((resp:any)=>{
+      this.inbox = resp.data;
+    });
+  }
 
   ngOnInit() {
   }
